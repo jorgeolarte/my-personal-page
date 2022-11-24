@@ -4,25 +4,25 @@ export default function Links() {
       id: 1,
       name: "Whatsapp",
       link: "https://wa.me/573017516045",
-      icon: "whatsapp.png",
+      icon: "whatsapp.svg",
     },
     {
       id: 2,
       name: "Linkedin",
       link: "https://www.linkedin.com/in/jorgeduardolarte/",
-      icon: "linkedin.png",
+      icon: "linkedin.svg",
     },
     {
       id: 4,
       name: "Github",
       link: "https://github.com/jorgeolarte",
-      icon: "github.png",
+      icon: "github.svg",
     },
     {
       id: 3,
       name: "Gmail",
       link: "mailto:me@jorgeolarte.com",
-      icon: "email.png",
+      icon: "email.svg",
     },
   ];
 
@@ -34,11 +34,14 @@ export default function Links() {
           className="relative flex flex-row justify-center items-center"
           href={item.link}
           target="_blank"
+          rel="noreferrer"
         >
-          <div className="absolute bg-gray hover:bg-black opacity-40 rounded-xl w-full h-9"></div>
+          <div className="absolute backdrop-blur-2xl bg-gray/40 hover:bg-black rounded-xl w-full h-9"></div>
+
           <div className="flex flex-row justify-center items-center gap-2 z-10">
-            <img src={item.icon} alt={item.name} />
-            <span>{item.name}</span>
+            <img src={item.icon} alt={item.name} className="fill-magenta" />
+
+            <div className="hover:btn-text">{item.name}</div>
           </div>
         </a>
       ))}

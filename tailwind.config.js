@@ -15,7 +15,7 @@ module.exports = {
       serif: ['"Montserrat"', "serif"],
     },
     backgroundImage: {
-      "linear-gradient": "linear-gradient(to top, var(--tw-gradient-stops))",
+      "linear-gradient": "linear-gradient(to right, var(--tw-gradient-stops))",
       "radial-gradient":
         "radial-gradient(circle at center, var(--tw-gradient-stops))",
     },

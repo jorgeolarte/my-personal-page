@@ -6,7 +6,7 @@
 
 @layer base {
   h1 {
-    @apply text-4xl md:text-5xl font-bold ;
+    @apply text-4xl md:text-5xl font-bold;
   }
 
   p {
@@ -15,5 +15,9 @@
 
   .subtitle {
     @apply text-lg md:text-xl font-medium;
+  }
+
+  .btn-text {
+    @apply bg-linear-gradient from-violet to-magenta bg-clip-text text-transparent;
   }
 }
