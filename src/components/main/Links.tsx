@@ -35,8 +35,8 @@ export default function Links() {
           href={item.link}
           target="_blank"
         >
-          <div className="absolute -z-10 bg-gray opacity-40 rounded-xl w-full h-9"></div>
-          <div className="flex flex-row justify-center items-center gap-2">
+          <div className="absolute bg-gray hover:bg-black opacity-40 rounded-xl w-full h-9"></div>
+          <div className="flex flex-row justify-center items-center gap-2 z-10">
             <img src={item.icon} alt={item.name} />
             <span>{item.name}</span>
           </div>
