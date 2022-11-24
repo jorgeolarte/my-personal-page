@@ -4,7 +4,7 @@ export default function Links() {
       id: 1,
       name: "Whatsapp",
       link: "https://wa.me/573017516045",
-      icon: "whatsApp.png",
+      icon: "whatsapp.png",
     },
     {
       id: 2,
