@@ -8,6 +8,8 @@ import { Footer } from "./components/footer";
 function App() {
   useEffect(() => {
     document.title = "Jorge Olarte | Web Developer";
+    let description = document.querySelector('meta[name="description"]');
+    description?.setAttribute("content", "Following my heart ❤️ since I was born")
   }, []);
 
   return (
