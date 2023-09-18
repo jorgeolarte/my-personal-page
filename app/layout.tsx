@@ -10,6 +10,43 @@ import { Montserrat } from "next/font/google";
 export const metadata: Metadata = {
   title: "Jorge Olarte | Web Developer",
   description: "Following my heart ❤️ since I was born",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://jorgeolarte.com",
+    title: "Jorge Olarte | Web Developer",
+    description: "Following my heart ❤️ since I was born",
+    images: [
+      {
+        url: "https://jorgeolarte.com/jorge-olarte.jpg",
+        width: 800,
+        height: 800,
+        alt: "Jorge Olarte",
+      },
+    ],
+    siteName: "Jorge Olarte",
+  },
+  keywords: [
+    "jorge olarte",
+    "web developer",
+    "software developer",
+    "software engineer",
+    "react",
+    "nextjs",
+    "javascript",
+    "typescript",
+    "tailwindcss",
+    "css",
+    "html",
+    "developer",
+    "programmer",
+    "engineer",
+    "react developer",
+    "nextjs developer",
+    "javascript developer",
+    "typescript developer",
+    "tailwindcss developer",
+  ],
 };
 
 // eslint-disable-next-line new-cap
