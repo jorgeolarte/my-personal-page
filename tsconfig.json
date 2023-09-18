@@ -14,10 +14,17 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "paths": {
-      "@Components/*": ["./src/components/*"]
-    }
+      "@Components/*": ["./components/*"]
+    },
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["src"]
+  "include": ["app", ".next/types/**/*.ts", "components"],
+  "exclude": ["node_modules"]
 }

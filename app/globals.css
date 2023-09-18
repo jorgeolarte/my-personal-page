@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-4xl md:text-5xl font-bold;
+  }
+
+  p {
+    @apply text-sm md:text-base font-normal;
+  }
+
+  .subtitle {
+    @apply text-lg md:text-xl font-medium;
+  }
+
+  .btn-text {
+    @apply bg-linear-gradient from-violet to-magenta bg-clip-text text-transparent;
+  }
+}
