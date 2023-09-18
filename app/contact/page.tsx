@@ -96,6 +96,7 @@ export default function Page() {
             sitekey={process.env.NEXT_PUBLIC_GOOGLE_PUBLIC_SITE_KEY || ""}
             ref={recaptchaRef}
             onChange={handleRecaptcha}
+            theme="dark"
           />
           {errors.recaptcha && (
             <span className="bg-clip-text bg-linear-gradient from-violet to-magenta text-clip text-transparent text-sm">
