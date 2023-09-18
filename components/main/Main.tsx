@@ -10,7 +10,12 @@ type Props = {
   }[];
 };
 
-async function GetLinks(): Promise<Props> {
+/**
+ * Get the links from DatoCMS.
+ * @return {Props} The sum of the two numbers.
+ * @throws Will throw an error if the response is not ok.
+ */
+async function getLinks(): Promise<Props> {
   "use server";
   const response = await fetch(`${process.env.NEXT_PUBLIC_DATOCMS_API_URL}`, {
     method: "POST",
@@ -41,8 +46,13 @@ async function GetLinks(): Promise<Props> {
   return json.data;
 }
 
-export default async function Main() {
-  const data = await GetLinks();
+/**
+ * Show the main component.
+ * @return {Promise<JSX.Element>} The sum of the two numbers.
+ *
+ */
+export default async function Main(): Promise<JSX.Element> {
+  const data = await getLinks();
 
   return (
     <div className="container md:w-4/12 w-11/12">

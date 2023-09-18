@@ -20,6 +20,10 @@ const schema = z.object({
 
 type FormValues = z.infer<typeof schema>;
 
+/**
+ * Show the contact page.
+ * @return {JSX} The sum of the two numbers.
+ */
 export default function Page() {
   const recaptchaRef = useRef<ReCAPTCHA>(null);
   const router = useRouter();

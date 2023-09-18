@@ -12,16 +12,22 @@ export const metadata: Metadata = {
   description: "Following my heart ❤️ since I was born",
 };
 
+// eslint-disable-next-line new-cap
 const montserrat = Montserrat({
   weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
 });
 
+/**
+ * Root layout
+ * @param {React.ReactNode} children The sum of the two numbers.
+ * @return {JSX.Element} The sum of the two numbers.
+ */
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {
+}): JSX.Element {
   return (
     <html lang="en" className={montserrat.className}>
       <body>

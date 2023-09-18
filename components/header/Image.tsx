@@ -1,7 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function ImageHeader() {
+/**
+ * Show the image header.
+ * @return {JSX.Element} The sum of the two numbers.
+ */
+export default function ImageHeader(): JSX.Element {
   return (
     <div className="flex flex-col gap-8 items-center">
       <div className="relative">
