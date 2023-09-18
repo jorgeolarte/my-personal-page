@@ -21,7 +21,7 @@ async function GetLinks(): Promise<Props> {
     },
     body: JSON.stringify({
       query: `query {
-          allLinks(filter: { active: { eq: true } }) {
+          allLinks(filter: { active: { eq: true } }, orderBy: order_ASC) {
             title
             url
             target
