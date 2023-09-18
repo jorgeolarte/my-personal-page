@@ -1,4 +1,8 @@
-export default function Bio() {
+/**
+ * Bio component
+ * @return {JSX.Element} The sum of the two numbers.
+ */
+export default function Bio(): JSX.Element {
   return (
     <div>
       <p>💻 MSc In Software Engineering just because</p>

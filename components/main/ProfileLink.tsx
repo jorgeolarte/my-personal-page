@@ -8,7 +8,20 @@ type Props = {
   icon: string;
 };
 
-export default function ProfileLink({ title, url, target, icon }: Props) {
+/**
+ * Show the profile link.
+ * @param {string} title - The title of the link.
+ * @param {string} url - The url of the link.
+ * @param {string} target - The target of the link.
+ * @param {string} icon - The icon of the link."
+ * @return {JSX.Element} The sum of the two numbers.
+ */
+export default function ProfileLink({
+  title,
+  url,
+  target,
+  icon,
+}: Props): JSX.Element {
   return (
     <Link
       className="relative flex flex-row justify-center items-center"
