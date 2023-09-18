@@ -91,12 +91,11 @@ export default function Page() {
           )}
         </div>
 
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 justify-center items-center">
           <ReCAPTCHA
             sitekey={process.env.NEXT_PUBLIC_GOOGLE_PUBLIC_SITE_KEY || ""}
             ref={recaptchaRef}
             onChange={handleRecaptcha}
-            hidden={true}
           />
           {errors.recaptcha && (
             <span className="bg-clip-text bg-linear-gradient from-violet to-magenta text-clip text-transparent text-sm">
