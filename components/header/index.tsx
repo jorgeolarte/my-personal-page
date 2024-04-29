@@ -1,5 +1,4 @@
 import { HeaderWrapper } from "@/components/ui/header-wrapper";
-// import { Bio } from "@/components/header/bio";
 import { ImageHeader } from "@/components/header/image-header";
 
 /**
@@ -11,7 +10,11 @@ export function Header(): JSX.Element {
     <HeaderWrapper>
       <>
         <ImageHeader />
-        {/* <Bio /> */}
+        <div>
+          <p>💻 MSc In Software Engineering just because</p>
+          <p>🤓 Following my heart since I was born</p>
+          <p>😎 I found out my purpose helping others</p>
+        </div>
       </>
     </HeaderWrapper>
   );

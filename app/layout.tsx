@@ -8,13 +8,13 @@ import { Header } from "@/components/header";
 import { Montserrat } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Jorge Olarte | Web Developer",
+  title: "Jorge Olarte | Software Developer",
   description: "Following my heart ❤️ since I was born",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://jorgeolarte.com",
-    title: "Jorge Olarte | Web Developer",
+    title: "Jorge Olarte | Software Developer",
     description: "Following my heart ❤️ since I was born",
     images: [
       {
