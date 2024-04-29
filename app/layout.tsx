@@ -1,10 +1,10 @@
 import React from "react";
 import { Metadata } from "next";
 import "./globals.css";
-import { Background } from "@Components/background";
-import { Container } from "@Components/container";
-import { Header } from "@Components/header";
-import { Footer } from "@Components/footer";
+import { Background } from "@/components/ui/background";
+import { Container } from "@/components/ui/container";
+import { Footer } from "@/components/ui/footer";
+import { Header } from "@/components/header";
 import { Montserrat } from "next/font/google";
 
 export const metadata: Metadata = {

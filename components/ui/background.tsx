@@ -2,7 +2,7 @@
  * Show a background with a gradient
  * @return {JSX.Element} The sum of the two numbers.
  */
-export default function Background(): JSX.Element {
+export function Background(): JSX.Element {
   return (
     <div className="fixed w-full -z-10 bg-black text-white">
       <div className="flex flex-col md:flex-row justify-between items-center h-screen animate-rotate ">
