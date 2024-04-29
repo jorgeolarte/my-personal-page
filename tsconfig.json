@@ -16,7 +16,7 @@
     "noEmit": true,
     "jsx": "preserve",
     "paths": {
-      "@Components/*": ["./components/*"]
+      "@/*": ["./*"]
     },
     "incremental": true,
     "plugins": [
