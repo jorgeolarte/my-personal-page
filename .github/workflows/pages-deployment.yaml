@@ -13,11 +13,11 @@ jobs:
 
       # Run a build step here if your project requires
       - name: Cloudflare Pages GitHub Action
-        uses: cloudflare/pages-action@v1.5.0
+        uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: jorgeolarte
-          directory: YOUR_PACKAGE_DIRECTORY
+          directory: /
           # Enable Wrangler v3
           wranglerVersion: '3'
