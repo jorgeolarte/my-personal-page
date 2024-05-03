@@ -18,6 +18,6 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: jorgeolarte
-          directory: /
+          directory: .vercel/output/static
           # Enable Wrangler v3
           wranglerVersion: '3'
