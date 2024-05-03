@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@cloudflare/next-on-pages": "^1.11.2",
     "@hookform/resolvers": "^3.3.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -34,7 +33,7 @@
     "format": "prettier --write .",
     "test-all": "npm run check-format && npm run check-lint && npm run check-types && npm run build",
     "prepare": "husky install",
-    "deploy": "wrangler deploy --minify --name jorgeolarte app/api/[[...route]]/route.ts"
+    "pages:build": "npx @cloudflare/next-on-pages"
   },
   "eslintConfig": {
     "extends": [
@@ -55,6 +54,7 @@
     ]
   },
   "devDependencies": {
+    "@cloudflare/next-on-pages": "^1.11.2",
     "@types/react-google-recaptcha": "^2.1.5",
     "@typescript-eslint/eslint-plugin": "^6.7.2",
     "@typescript-eslint/parser": "^6.7.2",
