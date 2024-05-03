@@ -17,13 +17,8 @@ jobs:
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: 3cf4c7f96e1872fb978c095169363e71
-          projectName: jorgeolarte
-          directory: /.vercel/output/static
-          # Optional: Switch what branch you are publishing to.
-          # By default this will be the branch which triggered this workflow
-          branch: main
-          # Optional: Change the working directory
-          workingDirectory: my-site
-          # Optional: Change the Wrangler version, allows you to point to a specific version or a tag such as `beta`
+          accountId: YOUR_ACCOUNT_ID
+          projectName: YOUR_PROJECT_NAME
+          directory: YOUR_BUILD_OUTPUT_DIRECTORY
+          # Enable Wrangler v3
           wranglerVersion: '3'
