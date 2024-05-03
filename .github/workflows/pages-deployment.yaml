@@ -13,7 +13,7 @@ jobs:
 
       # Run a build step here if your project requires
       - name: Cloudflare Pages GitHub Action
-        uses: cloudflare/pages-action@v1
+        uses: cloudflare/pages-action@v1.5.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
