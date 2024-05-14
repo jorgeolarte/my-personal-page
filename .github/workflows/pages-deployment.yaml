@@ -20,4 +20,4 @@ jobs:
           projectName: jorgeolarte
           directory: /.vercel/output/static
           # Enable Wrangler v3
-          wranglerVersion: '3'
+          wranglerVersion: "3"
