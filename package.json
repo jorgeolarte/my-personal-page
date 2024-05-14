@@ -11,11 +11,11 @@
     "@types/node": "^16.18.3",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.0.9",
-    "eslint-config-next": "^13.4.19",
+    "eslint-config-next": "^14.2.3",
     "hono": "^4.3.0",
-    "next": "^13.4.19",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "next": "^14.2.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-form-hook": "^0.0.1",
     "react-google-recaptcha": "^3.1.0",
     "typescript": "^5.2.2",
@@ -32,8 +32,7 @@
     "check-lint": "eslint . --ext ts --ext tsx --ext js",
     "format": "prettier --write .",
     "test-all": "npm run check-format && npm run check-lint && npm run check-types && npm run build",
-    "prepare": "husky install",
-    "pages:build": "npx @cloudflare/next-on-pages"
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -54,7 +53,6 @@
     ]
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.11.2",
     "@types/react-google-recaptcha": "^2.1.5",
     "@typescript-eslint/eslint-plugin": "^6.7.2",
     "@typescript-eslint/parser": "^6.7.2",
@@ -66,7 +64,6 @@
     "husky": "^8.0.0",
     "postcss": "^8.4.31",
     "prettier": "3.0.3",
-    "tailwindcss": "^3.3.3",
-    "wrangler": "^3.53.1"
+    "tailwindcss": "^3.3.3"
   }
 }
