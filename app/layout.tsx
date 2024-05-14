@@ -5,7 +5,7 @@ import { Background } from "@/components/ui/background";
 import { Container } from "@/components/ui/container";
 import { Footer } from "@/components/ui/footer";
 import { Header } from "@/components/header";
-import { Montserrat } from "next/font/google";
+import { Montserrat as FontSans } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Jorge Olarte | Software Developer",
@@ -50,9 +50,10 @@ export const metadata: Metadata = {
 };
 
 // eslint-disable-next-line new-cap
-const montserrat = Montserrat({
+const fontSans = FontSans({
   weight: ["300", "400", "500", "700"],
   subsets: ["latin"],
+  variable: "--font-sans",
 });
 
 /**
@@ -66,7 +67,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <html lang="en" className={montserrat.className}>
+    <html lang="en" className={fontSans.variable}>
       <body>
         <div className="text-white">
           <Background />
