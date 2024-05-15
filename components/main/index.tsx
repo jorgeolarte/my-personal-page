@@ -1,4 +1,4 @@
-import { SocialButton } from "@/components/ui/social-button";
+import { SocialButton } from "@/components/main/social-button";
 import { getLinks } from "@/actions/datocms";
 
 /**

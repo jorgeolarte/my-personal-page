@@ -13,8 +13,8 @@ const config = {
   theme: {
     colors: {
       transparent: "transparent",
-      magenta: "#C621E5",
-      violet: "#720CD4",
+      // magenta: "#C621E5",
+      // violet: "#720CD4",
       white: "#ffffff",
       black: "#000000",
       gray: "#3a3a3a",
@@ -38,6 +38,14 @@ const config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        magenta: {
+          DEFAULT: "hsl(var(--magenta))",
+          foreground: "hsl(var(--magenta-foreground))",
+        },
+        violet: {
+          DEFAULT: "hsl(var(--violet))",
+          foreground: "hsl(var(--violet-foreground))",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
