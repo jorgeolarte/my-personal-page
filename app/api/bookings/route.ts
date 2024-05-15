@@ -12,6 +12,8 @@ type RequestBody = {
 export async function POST(request: Request) {
   const authorization = request.headers.get("Authorization");
 
+  console.log("Authorization", authorization);
+
   if (!authorization?.includes(`${process.env.BOOKING_TOKEN}`))
     return new Response("Unauthorized", { status: 401 });
 
