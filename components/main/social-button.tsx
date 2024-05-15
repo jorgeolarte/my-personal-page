@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 type Props = {
   title: string;
@@ -19,15 +20,13 @@ type Props = {
  */
 export function SocialButton({ title, url, target, icon }: Props): JSX.Element {
   return (
-    <Link
-      className="relative flex flex-row justify-center items-center"
-      href={url}
-      target={target}
-      rel="noreferrer"
-    >
-      <div className="absolute backdrop-blur-2xl bg-gray/40 hover:bg-black rounded-xl w-full h-9"></div>
-
-      <div className="flex flex-row justify-center items-center gap-2 z-10">
+    <Button className="w-full">
+      <Link
+        className="flex flex-row gap-2"
+        href={url}
+        target={target}
+        rel="noreferrer"
+      >
         <Image
           src={icon}
           alt={title}
@@ -36,8 +35,8 @@ export function SocialButton({ title, url, target, icon }: Props): JSX.Element {
           height={20}
         />
 
-        <div className="hover:btn-text">{title}</div>
-      </div>
-    </Link>
+        {title}
+      </Link>
+    </Button>
   );
 }
