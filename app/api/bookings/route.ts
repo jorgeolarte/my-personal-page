@@ -10,12 +10,10 @@ type RequestBody = {
  * @return {Promise<Response>} The response object.
  */
 export async function POST(request: Request) {
-  // const authorization = request.headers.get("authorization");
+  const authorization = request.headers.get("authorization");
 
-  // console.log(authorization)
-
-  // if (!authorization?.startsWith(`Bearer ${process.env.BOOKING_TOKEN}`))
-  //   return new Response("Unauthorized", { status: 401 });
+  if (!authorization?.startsWith(`Bearer ${process.env.BOOKING_TOKEN}`))
+    return new Response("Unauthorized", { status: 401 });
 
   const { name, phone, address } = (await request.json()) as RequestBody;
 
