@@ -15,7 +15,7 @@ export async function POST(request: Request) {
   return new Response(
     JSON.stringify({
       bookingId: Math.floor(Math.random() * 1000),
-      message: `Booking received for ${name} with phone number ${phone} at ${address}`,
+      message: `Hey ${name}!, tu movil ha sido confirmado a la dirección ${address}, hemos enviado un mensaje a ${phone} con los detalles de tu viaje.`,
     }),
     { status: 200 }
   );
