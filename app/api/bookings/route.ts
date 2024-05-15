@@ -12,6 +12,8 @@ type RequestBody = {
 export async function POST(request: Request) {
   const { name, phone, address } = (await request.json()) as RequestBody;
 
+  console.log(name, phone, address);
+
   return new Response(
     JSON.stringify({
       bookingId: Math.floor(Math.random() * 1000),
