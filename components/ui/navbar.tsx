@@ -13,17 +13,13 @@ export function Navbar() {
       <div className="flex flex-row justify-center items-center gap-2">
         <Link href="/">
           <Image
-            src="/logo-color.png"
+            src="/logo.png"
             className="w-12 rounded-full"
             alt="Jorge Olarte"
             width={36}
             height={36}
           />
         </Link>
-        <div className="flex flex-col ">
-          <span className="text-sm font-bold">Jorge Olarte</span>
-          <span className="text-xs">Software Developer</span>
-        </div>
       </div>
       <ul className="list-none flex flex-row text-sm">
         <li>
@@ -33,12 +29,12 @@ export function Navbar() {
         </li>
         <li>
           <Button variant="link">
-            <Link href="/bot">Bot</Link>
+            <Link href="/bot">🤖 Bot</Link>
           </Button>
         </li>
         <li>
           <Button variant="link">
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact">Send me a message</Link>
           </Button>
         </li>
       </ul>

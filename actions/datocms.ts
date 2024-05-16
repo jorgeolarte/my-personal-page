@@ -7,6 +7,7 @@ type AllLinksProps = {
     target: string;
     icon: string;
     active: boolean;
+    social: boolean;
   }[];
 };
 
@@ -31,6 +32,7 @@ export async function getLinks(): Promise<AllLinksProps> {
                 target
                 icon
                 active
+                social
               }
             }`,
     }),

@@ -7,6 +7,7 @@ type Props = {
   url: string;
   target: string;
   icon: string;
+  social: boolean;
 };
 
 /**
@@ -15,10 +16,17 @@ type Props = {
  * @param {string} url - The url of the link.
  * @param {string} target - The target of the link.
  * @param {string} icon - The icon of the link.
+ * @param {boolean} social - If the link is a social network.
  * @return {JSX.Element} The SocialButton component.
  *
  */
-export function SocialButton({ title, url, target, icon }: Props): JSX.Element {
+export function SocialButton({
+  title,
+  url,
+  target,
+  icon,
+  social,
+}: Props): JSX.Element {
   return (
     <Button className="w-full">
       <Link
@@ -29,7 +37,7 @@ export function SocialButton({ title, url, target, icon }: Props): JSX.Element {
       >
         <Image src={icon} alt={title} width={20} height={20} />
 
-        {title}
+        {!social && title}
       </Link>
     </Button>
   );
