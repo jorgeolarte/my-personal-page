@@ -35,7 +35,7 @@ export function ImageHeader(): JSX.Element {
       </div>
       <div className="flex flex-col gap-2">
         <h1>Jorge Olarte</h1>
-        <span className="subtitle">Software Developer</span>
+        <h3>Software Developer</h3>
       </div>
     </div>
   );

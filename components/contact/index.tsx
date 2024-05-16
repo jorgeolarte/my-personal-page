@@ -45,10 +45,7 @@ export function Contact(): JSX.Element {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit(onSubmit)}
-      className="flex flex-col gap-5 mt-10 md:mt-7"
-    >
+    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
       <h2>Send me a message</h2>
       <div className="flex flex-col gap-1">
         <label htmlFor="name" className="hidden">
