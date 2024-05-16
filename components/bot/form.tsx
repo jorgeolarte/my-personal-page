@@ -16,7 +16,7 @@ export function Form() {
     >
       <Input
         value={input}
-        placeholder="¿En qué puedo ayudarte?"
+        placeholder="¿How can I help you?"
         onChange={handleInputChange}
       />
 

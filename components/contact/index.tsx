@@ -2,10 +2,12 @@
 import { useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import ReCAPTCHA from "react-google-recaptcha";
 import { ContactSchema, ContactFormValues } from "@/schema/contact";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
 
 /**
  * Show the contact page.
@@ -43,73 +45,75 @@ export function Contact(): JSX.Element {
   };
 
   return (
-    <div className="md:w-4/12 w-10/12">
-      <form
-        onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col gap-5 mt-10 md:mt-7"
-      >
-        <h2>Contáctame</h2>
-        <div className="flex flex-col gap-1">
-          <label htmlFor="name" className="hidden">
-            Nombre
-          </label>
-          <input
-            type="text"
-            {...register("name", { required: true })}
-            placeholder="Tu nombre *"
-            className="rounded-xl h-9 p-4 text-white border-0 bg-gray/40 outline-none hover:border-2 hover:border-magenta focus:border-magenta focus:border-2 focus:bg-white/6 placeholder-white"
-          />
-          {errors.name && (
-            <span className="bg-clip-text bg-linear-gradient from-violet to-magenta text-clip text-transparent text-sm">
-              {errors.name.message}
-            </span>
-          )}
-        </div>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="flex flex-col gap-5 mt-10 md:mt-7"
+    >
+      <h2>Send me a message</h2>
+      <div className="flex flex-col gap-1">
+        <label htmlFor="name" className="hidden">
+          Name
+        </label>
+        <Input
+          type="text"
+          {...register("name", { required: true })}
+          placeholder="Tu nombre *"
+        />
+        {errors.name && (
+          <span className="bg-clip-text bg-linear-gradient from-violet to-magenta text-clip text-transparent text-sm">
+            {errors.name.message}
+          </span>
+        )}
+      </div>
 
-        <div className="flex flex-col gap-1">
-          <label htmlFor="message" className="hidden">
-            Escribe tu mensaje
-          </label>
-          <textarea
-            {...register("message", { required: true })}
-            placeholder="Escribe tu mensaje..."
-            className="rounded-xl h-24 p-4 text-white border-0 bg-gray/40 outline-none hover:border-2 hover:border-magenta focus:border-magenta focus:border-2 focus:bg-white/ placeholder-white"
-          />
-          {errors.message && (
-            <span className="bg-clip-text bg-linear-gradient from-violet to-magenta text-clip text-transparent text-sm">
-              {errors.message.message}
-            </span>
-          )}
-        </div>
+      <div className="flex flex-col gap-1">
+        <label htmlFor="message" className="hidden">
+          Message
+        </label>
+        <Textarea
+          {...register("message", { required: true })}
+          placeholder="Escribe tu mensaje..."
+        />
+        {errors.message && (
+          <span className="bg-clip-text bg-linear-gradient from-violet to-magenta text-clip text-transparent text-sm">
+            {errors.message.message}
+          </span>
+        )}
+      </div>
 
-        <div className="flex flex-col gap-1 justify-center items-center">
-          <ReCAPTCHA
-            sitekey={process.env.NEXT_PUBLIC_GOOGLE_PUBLIC_SITE_KEY || ""}
-            ref={recaptchaRef}
-            onChange={handleRecaptcha}
-            size="invisible"
-            theme="dark"
-          />
-          {errors.recaptcha && (
-            <span className="bg-clip-text bg-linear-gradient from-violet to-magenta text-clip text-transparent text-sm">
-              {errors.recaptcha.message}
-            </span>
-          )}
-        </div>
+      <div className="flex flex-col gap-1 justify-center items-center">
+        <ReCAPTCHA
+          sitekey={process.env.NEXT_PUBLIC_GOOGLE_PUBLIC_SITE_KEY || ""}
+          ref={recaptchaRef}
+          onChange={handleRecaptcha}
+          theme="dark"
+          size="normal"
+        />
+        {errors.recaptcha && (
+          <span className="bg-clip-text bg-linear-gradient from-violet to-magenta text-clip text-transparent text-sm">
+            {errors.recaptcha.message}
+          </span>
+        )}
+      </div>
 
-        <button type="submit">
-          <div className="flex flex-row justify-center items-center gap-2 backdrop-blur-2xl bg-gray/40 hover:bg-black rounded-xl h-9 hover:btn-text cursor-pointer">
-            <Image
-              src="/whatsapp.svg"
-              alt="Enviar mensaje"
-              className="fill-magenta"
-              width={20}
-              height={20}
-            />
-            Enviar mensaje
-          </div>
-        </button>
-      </form>
-    </div>
+      <Button className="space-x-2" type="submit">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6 text-white"
+          viewBox="0 0 14 14"
+        >
+          <g
+            fill="none"
+            stroke="currentColor"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M12.101 13.5v-2.833a2.573 2.573 0 0 0-2.573-2.573H7.294V3.918c0-.664-.539-1.202-1.202-1.202v0c-.664 0-1.203.538-1.203 1.202v5.474l-.4.075a1.715 1.715 0 0 0-1.096 2.659l.161.234l.784 1.14" />
+            <path d="M2.597 4.932a3.611 3.611 0 1 1 7.034 0" />
+          </g>
+        </svg>
+        <span>Press to touch me</span>
+      </Button>
+    </form>
   );
 }
