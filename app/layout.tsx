@@ -3,8 +3,6 @@ import { Metadata } from "next";
 import "./globals.css";
 import { Background } from "@/components/ui/background";
 import { Container } from "@/components/ui/container";
-import { Footer } from "@/components/ui/footer";
-import { Header } from "@/components/header";
 import { Montserrat as FontSans } from "next/font/google";
 
 export const metadata: Metadata = {
@@ -72,11 +70,7 @@ export default function RootLayout({
         <div className="text-white">
           <Background />
           <Container>
-            <>
-              <Header />
-              {children}
-              <Footer />
-            </>
+            <>{children}</>
           </Container>
         </div>
       </body>
