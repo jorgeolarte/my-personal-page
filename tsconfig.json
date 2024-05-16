@@ -25,6 +25,6 @@
       }
     ]
   },
-  "include": ["app", ".next/types/**/*.ts", "components"],
+  "include": ["app", ".next/types/**/*.ts", "components", "providers", "hooks"],
   "exclude": ["node_modules"]
 }

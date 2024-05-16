@@ -10,12 +10,10 @@ export async function Main(): Promise<JSX.Element> {
   const data = await getLinks();
 
   return (
-    <div className="container md:w-4/12 w-11/12">
-      <div className="flex flex-col gap-6 mt-10 md:mt-7">
-        {data.allLinks.map((link) => (
-          <SocialButton key={link.title} {...link} />
-        ))}
-      </div>
+    <div className="w-full flex flex-col gap-6">
+      {data.allLinks.map((link) => (
+        <SocialButton key={link.title} {...link} />
+      ))}
     </div>
   );
 }

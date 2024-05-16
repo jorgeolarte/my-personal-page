@@ -1,4 +1,4 @@
-import { HeaderWrapper } from "@/components/ui/header-wrapper";
+import { HeaderWrapper } from "@/components/header/header-wrapper";
 import { ImageHeader } from "@/components/header/image-header";
 
 /**
