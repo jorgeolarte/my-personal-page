@@ -34,7 +34,7 @@ export function Navbar() {
         </li>
         <li>
           <Button variant="link">
-            <Link href="/contact">Send me a message</Link>
+            <Link href="/contact">Contact me</Link>
           </Button>
         </li>
       </ul>

@@ -79,9 +79,6 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
   body {
     @apply bg-background text-foreground;
   }
@@ -94,15 +91,15 @@
     @apply text-xl md:text-2xl font-medium;
   }
 
+  h3 {
+    @apply text-lg md:text-xl font-medium;
+  }
+
   p {
-    @apply text-sm md:text-base font-normal;
+    @apply text-sm md:text-base;
   }
 
   .subtitle {
     @apply text-lg md:text-xl font-medium;
-  }
-
-  .btn-text {
-    @apply bg-linear-gradient from-violet to-magenta bg-clip-text text-transparent;
   }
 }

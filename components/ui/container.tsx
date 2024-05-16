@@ -9,7 +9,7 @@ type Props = {
  */
 export function Container({ children }: Props): JSX.Element {
   return (
-    <div className="flex flex-col justify-around items-center gap-4 h-screen max-h-min max-w-md mx-auto">
+    <div className="flex flex-col justify-start items-center gap-4 h-screen max-h-min max-w-md mx-auto px-4">
       {children}
     </div>
   );
