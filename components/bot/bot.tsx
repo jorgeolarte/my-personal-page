@@ -8,7 +8,7 @@ import { Form } from "@/components/bot/form";
  */
 export function Bot() {
   return (
-    <div className="flex flex-col justify-between items-stretch h-screen w-full py-4 gap-4">
+    <div className="flex flex-col justify-between items-stretch h-screen w-full pb-4 gap-4">
       <Messages />
 
       <Form />

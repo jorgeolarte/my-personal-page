@@ -1,6 +1,7 @@
 "use client";
 import { Bot } from "@/components/bot/bot";
 import { BotProvider } from "@/providers/BotContext";
+import { Navbar } from "@/components/ui/navbar";
 
 /**
  * Render the bot page
@@ -9,6 +10,7 @@ import { BotProvider } from "@/providers/BotContext";
 export default function BotPage() {
   return (
     <BotProvider>
+      <Navbar />
       <Bot />
     </BotProvider>
   );
