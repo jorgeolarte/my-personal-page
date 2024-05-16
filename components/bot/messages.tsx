@@ -14,7 +14,7 @@ export function Messages() {
   }
 
   return (
-    <div className="flex-1 bg-primary/40 backdrop-blur-2xl rounded-md overflow-auto">
+    <div className="bg-primary/40 backdrop-blur-2xl rounded-md">
       <div className="flex flex-col gap-4 p-4">
         {messages.map((m) => (
           <BubbleText key={m.id} role={m.role} content={m.content} />

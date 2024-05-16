@@ -27,13 +27,7 @@ export function SocialButton({ title, url, target, icon }: Props): JSX.Element {
         target={target}
         rel="noreferrer"
       >
-        <Image
-          src={icon}
-          alt={title}
-          className="fill-magenta"
-          width={20}
-          height={20}
-        />
+        <Image src={icon} alt={title} width={20} height={20} />
 
         {title}
       </Link>
