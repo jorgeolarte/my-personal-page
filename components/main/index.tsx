@@ -1,5 +1,5 @@
-import { links as linksConfig } from '@/src/data/links'
 import { SocialButton } from '@/components/main/social-button'
+import { links as linksConfig } from '@/src/data/links'
 
 /**
  * Show the main component.
