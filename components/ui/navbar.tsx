@@ -27,16 +27,6 @@ export function Navbar() {
             <Link href="/">Home</Link>
           </Button>
         </li>
-        <li>
-          <Button variant="link">
-            <Link href="/bot">🤖 Bot</Link>
-          </Button>
-        </li>
-        <li>
-          <Button variant="link">
-            <Link href="/contact">Contact me</Link>
-          </Button>
-        </li>
       </ul>
     </nav>
   )
