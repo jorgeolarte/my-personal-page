@@ -1,15 +1,13 @@
-import { getLinks } from '@/actions/datocms'
+import { links as linksConfig } from '@/src/data/links'
 import { SocialButton } from '@/components/main/social-button'
 
 /**
  * Show the main component.
- * @return {Promise<JSX.Element>} The sum of the two numbers.
+ * @return {JSX.Element} The main CTA block.
  */
-export async function Main(): Promise<JSX.Element> {
-  const links = await getLinks()
-
-  const socialLinks = links.allLinks.filter((link) => link.social)
-  const otherLinks = links.allLinks.filter((link) => !link.social)
+export function Main(): JSX.Element {
+  const socialLinks = linksConfig.allLinks.filter((link) => link.social)
+  const otherLinks = linksConfig.allLinks.filter((link) => !link.social)
 
   return (
     <div className="flex flex-col gap-6 text-center ">
