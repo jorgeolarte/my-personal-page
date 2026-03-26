@@ -1,12 +1,12 @@
 # Personal Web Page Repository
 
-Welcome to the repository for my personal web page! This website was developed using Next.js, DatoCMS, JavaScript, and Tailwind CSS. In this README file, you will find information about the technologies used, how to set up the project locally, and how to contribute if you wish to do so.
+Welcome to the repository for my personal web page! This website was developed using Next.js, JavaScript, and Tailwind CSS. Los links del sitio se configuran desde `src/data/links.json`. In this README file, you will find information about the technologies used, how to set up the project locally, and how to contribute if you wish to do so.
 
 ## Technologies Used
 
 - **Next.js:** Next.js is a React framework that makes it easy to build server-rendered React applications.
 
-- **DatoCMS:** DatoCMS is a headless content management system (CMS) that allows for easy content management and integration with your web applications.
+- **Links JSON:** los enlaces del home se cargan desde `src/data/links.json`.
 
 - **JavaScript:** JavaScript is the primary programming language used for the website's functionality.
 

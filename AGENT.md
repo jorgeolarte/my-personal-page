@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Personal portfolio website built with Next.js 14 (App Router), TypeScript, Tailwind CSS, and DatoCMS as a headless CMS. The site includes a chatbot feature using Groq's LLaMA model through the Vercel AI SDK.
+Personal portfolio website built with Next.js 14 (App Router), TypeScript, and Tailwind CSS. Los links del sitio se configuran desde `src/data/links.json`. The site includes a chatbot feature using Groq's LLaMA model through the Vercel AI SDK.
 
 ## Development Commands
 
@@ -49,7 +49,7 @@ All checks must pass before commits are allowed. The hook provides colorful erro
   - `main/` - Main content and social buttons
   - `ui/` - Reusable UI components (shadcn/ui style)
 - `actions/` - Server actions
-  - `datocms.ts` - DatoCMS GraphQL queries (fetches links data)
+  - `datocms.ts` - GraphQL legacy (fetches links data, ya no se usa para el render de links)
 - `lib/` - Utilities
   - `utils.ts` - Utility functions (includes `cn()` for class merging)
 - `hooks/` - Custom React hooks
@@ -61,9 +61,7 @@ All checks must pass before commits are allowed. The hook provides colorful erro
 
 **Path Aliases**: `@/*` maps to project root (see `tsconfig.json`)
 
-**DatoCMS Integration**: Server-side data fetching via GraphQL API. The `getLinks()` action fetches active links ordered by custom field. Requires environment variables:
-- `NEXT_PUBLIC_DATOCMS_API_URL`
-- `NEXT_PUBLIC_DATOCMS_API_TOKEN`
+**Links configuration**: Los links del home se cargan desde el archivo JSON local `src/data/links.json` (no requiere env vars).
 
 **AI Chatbot**: Uses Groq API (not OpenAI) with LLaMA 3 model. The chatbot is configured as a Spanish-language taxi booking assistant. Requires:
 - `GROQ_API_KEY` environment variable
@@ -93,6 +91,6 @@ All checks must pass before commits are allowed. The hook provides colorful erro
 
 - The project uses Next.js App Router (not Pages Router)
 - Server Actions must be marked with `"use server"` directive
-- DatoCMS queries use `cache: "no-cache"` for fresh data
+- Los links del home se cargan desde el JSON local `src/data/links.json`
 - The chatbot system prompt is in Spanish and configured for taxi booking workflow
 - Husky pre-commit hook is comprehensive and will block commits that don't pass all checks
