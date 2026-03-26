@@ -1,6 +1,6 @@
-"use client";
-import { Messages } from "@/components/bot/messages";
-import { Form } from "@/components/bot/form";
+'use client'
+import { Form } from '@/components/bot/form'
+import { Messages } from '@/components/bot/messages'
 
 /**
  * Show the bot component.
@@ -13,5 +13,5 @@ export function Bot() {
 
       <Form />
     </div>
-  );
+  )
 }

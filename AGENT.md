@@ -15,22 +15,20 @@ npm start            # Run production build
 
 ### Code Quality
 ```bash
-npm run lint         # Run ESLint
-npm run check-lint   # ESLint with extended checks
-npm run check-format # Check Prettier formatting
-npm run format       # Auto-format with Prettier
+npm run lint         # Run Biome check (lint + formatting)
+npm run check-biome  # Alias de `lint`
+npm run format       # Auto-format with Biome
 npm run check-types  # TypeScript type checking
-npm run test-all     # Run all checks + build (format, lint, types, build)
+npm run test-all     # Run Biome check + types + build
 npm run clean        # Remove .next directory
 ```
 
 ### Pre-commit Hook
 This project uses Husky with a strict pre-commit hook that runs:
 1. Clean (.next removal)
-2. Prettier check
-3. ESLint check
-4. TypeScript type check
-5. Production build
+2. Biome check
+3. TypeScript type check
+4. Production build
 
 All checks must pass before commits are allowed. The hook provides colorful error messages to indicate failures.
 
@@ -83,9 +81,7 @@ All checks must pass before commits are allowed. The hook provides colorful erro
 
 ## Code Style
 
-**ESLint**: Extends Google style guide + React + TypeScript recommended rules. React import not required in JSX files.
-
-**Prettier**:
+**Biome** (lint + formatting):
 - 80 character line width
 - 2 space indentation
 - LF line endings

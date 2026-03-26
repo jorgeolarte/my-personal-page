@@ -1,5 +1,5 @@
-import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
+import { type ClassValue, clsx } from 'clsx'
+import { twMerge } from 'tailwind-merge'
 
 /**
  * Tailwind CSS classnames
@@ -7,5 +7,5 @@ import { twMerge } from "tailwind-merge";
  * @return {string} The sum of the two numbers.
  */
 export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+  return twMerge(clsx(inputs))
 }

@@ -12,5 +12,5 @@ export function Footer(): JSX.Element {
         Designed by <span className="font-medium">Jhony Espinosa</span>
       </p>
     </div>
-  );
+  )
 }

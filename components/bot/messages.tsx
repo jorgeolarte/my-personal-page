@@ -1,16 +1,16 @@
-import { useBot } from "@/hooks/useBot";
-import { BubbleText } from "./bubble-text";
-import { Hero } from "./hero";
+import { useBot } from '@/hooks/useBot'
+import { BubbleText } from './bubble-text'
+import { Hero } from './hero'
 
 /**
  * Show the messages.
  * @return {JSX.Element}
  */
 export function Messages() {
-  const { messages } = useBot();
+  const { messages } = useBot()
 
   if (messages.length === 0) {
-    return <Hero />;
+    return <Hero />
   }
 
   return (
@@ -21,5 +21,5 @@ export function Messages() {
         ))}
       </div>
     </div>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import { Contact } from "@/components/contact";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/ui/footer";
+import { Contact } from '@/components/contact'
+import { Header } from '@/components/header'
+import { Footer } from '@/components/ui/footer'
 
 /**
  * Show the main component.
@@ -13,5 +13,5 @@ export default function ContactPage(): JSX.Element {
       <Contact />
       <Footer />
     </>
-  );
+  )
 }

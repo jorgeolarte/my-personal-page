@@ -1,13 +1,13 @@
-import { useBot } from "@/hooks/useBot";
-import { Button } from "../ui/button";
-import { Input } from "../ui/input";
+import { useBot } from '@/hooks/useBot'
+import { Button } from '../ui/button'
+import { Input } from '../ui/input'
 
 /**
  * Show the form.
  * @return {JSX.Element}
  */
 export function Form() {
-  const { input, handleInputChange, handleSubmit } = useBot();
+  const { input, handleInputChange, handleSubmit } = useBot()
 
   return (
     <form
@@ -26,6 +26,7 @@ export function Form() {
           className="h-6 w-6"
           viewBox="0 0 24 24"
         >
+          <title>Enviar</title>
           <path
             fill="none"
             stroke="currentColor"
@@ -37,5 +38,5 @@ export function Form() {
         </svg>
       </Button>
     </form>
-  );
+  )
 }
