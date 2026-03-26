@@ -1,10 +1,12 @@
+import type { ReactNode } from 'react'
+
 type Props = {
-  children: JSX.Element
+  children: ReactNode
 }
 
 /**
  * Show the container.
- * @param {JSX.Element} children - The children of the container.
+ * @param {ReactNode} children - The children of the container.
  * @return {JSX.Element} The sum of the two numbers.
  */
 export function Container({ children }: Props): JSX.Element {
