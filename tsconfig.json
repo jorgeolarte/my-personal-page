@@ -14,7 +14,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "paths": {
       "@/*": ["./*"]
     },
@@ -25,6 +25,13 @@
       }
     ]
   },
-  "include": ["app", ".next/types/**/*.ts", "components", "providers", "hooks"],
+  "include": [
+    "app",
+    ".next/types/**/*.ts",
+    "components",
+    "providers",
+    "hooks",
+    ".next/dev/types/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }
