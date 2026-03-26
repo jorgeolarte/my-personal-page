@@ -1,15 +1,15 @@
-import { SocialButton } from "@/components/main/social-button";
-import { getLinks } from "@/actions/datocms";
+import { getLinks } from '@/actions/datocms'
+import { SocialButton } from '@/components/main/social-button'
 
 /**
  * Show the main component.
  * @return {Promise<JSX.Element>} The sum of the two numbers.
  */
 export async function Main(): Promise<JSX.Element> {
-  const links = await getLinks();
+  const links = await getLinks()
 
-  const socialLinks = links.allLinks.filter((link) => link.social);
-  const otherLinks = links.allLinks.filter((link) => !link.social);
+  const socialLinks = links.allLinks.filter((link) => link.social)
+  const otherLinks = links.allLinks.filter((link) => !link.social)
 
   return (
     <div className="flex flex-col gap-6 text-center ">
@@ -29,5 +29,5 @@ export async function Main(): Promise<JSX.Element> {
         </div>
       </div>
     </div>
-  );
+  )
 }

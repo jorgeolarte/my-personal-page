@@ -1,6 +1,6 @@
 type Props = {
-  children: JSX.Element;
-};
+  children: JSX.Element
+}
 
 /**
  * Show the container.
@@ -12,5 +12,5 @@ export function Container({ children }: Props): JSX.Element {
     <div className="flex flex-col justify-start items-center gap-4 h-screen max-h-min max-w-md mx-auto px-4">
       {children}
     </div>
-  );
+  )
 }

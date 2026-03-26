@@ -1,5 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image'
+import Link from 'next/link'
 
 /**
  * Show the image header.
@@ -38,5 +38,5 @@ export function ImageHeader(): JSX.Element {
         <h3>Software Developer</h3>
       </div>
     </div>
-  );
+  )
 }

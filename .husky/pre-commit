@@ -6,20 +6,11 @@ echo '🏗️👷 Styling, testing and building your project before committing'
 # Clean the project
 npm run clean
 
-# Check Prettier standards
-npm run check-format ||
+# Check Biome standards (lint + formatting in one pass)
+npm run check-biome ||
 (
-    echo '🤢🤮🤢🤮 Its F**KING RAW - Your styling looks disgusting. 🤢🤮🤢🤮
-            Prettier Check Failed. Run npm run format, add changes and try commit again.';
+    echo 'Biome Check Failed. Run npm run format, add changes and try commit again.';
     false;
-)
-
-# Check ESLint Standards
-npm run check-lint ||
-(
-        echo '😤🏀👋😤 Get that weak s**t out of here! 😤🏀👋😤 
-                ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
-        false; 
 )
 
 # Check tsconfig standards

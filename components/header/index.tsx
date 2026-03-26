@@ -1,5 +1,5 @@
-import { HeaderWrapper } from "@/components/header/header-wrapper";
-import { ImageHeader } from "@/components/header/image-header";
+import { HeaderWrapper } from '@/components/header/header-wrapper'
+import { ImageHeader } from '@/components/header/image-header'
 
 /**
  * Show the header.
@@ -8,14 +8,12 @@ import { ImageHeader } from "@/components/header/image-header";
 export function Header(): JSX.Element {
   return (
     <HeaderWrapper>
-      <>
-        <ImageHeader />
-        <div>
-          <p>💻 MSc In Software Engineering just because</p>
-          <p>🤓 Following my heart since I was born</p>
-          <p>😎 I found out my purpose helping others</p>
-        </div>
-      </>
+      <ImageHeader />
+      <div>
+        <p>💻 MSc In Software Engineering just because</p>
+        <p>🤓 Following my heart since I was born</p>
+        <p>😎 I found out my purpose helping others</p>
+      </div>
     </HeaderWrapper>
-  );
+  )
 }

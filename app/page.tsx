@@ -1,6 +1,6 @@
-import { Main } from "@/components/main";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/ui/footer";
+import { Header } from '@/components/header'
+import { Main } from '@/components/main'
+import { Footer } from '@/components/ui/footer'
 
 /**
  * Show the main component.
@@ -13,5 +13,5 @@ export default function HomePage(): JSX.Element {
       <Main />
       <Footer />
     </>
-  );
+  )
 }

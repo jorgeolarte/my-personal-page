@@ -1,14 +1,14 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import Image from 'next/image'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
 
 type Props = {
-  title: string;
-  url: string;
-  target: string;
-  icon: string;
-  social: boolean;
-};
+  title: string
+  url: string
+  target: string
+  icon: string
+  social: boolean
+}
 
 /**
  * Print button with social network icon.
@@ -40,5 +40,5 @@ export function SocialButton({
         {!social && title}
       </Link>
     </Button>
-  );
+  )
 }

@@ -1,21 +1,21 @@
-"use client";
-import { useRef } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useRouter } from "next/navigation";
-import ReCAPTCHA from "react-google-recaptcha";
-import { ContactSchema, ContactFormValues } from "@/schema/contact";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Button } from "@/components/ui/button";
+'use client'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useRouter } from 'next/navigation'
+import { useRef } from 'react'
+import ReCAPTCHA from 'react-google-recaptcha'
+import { useForm } from 'react-hook-form'
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { type ContactFormValues, ContactSchema } from '@/schema/contact'
 
 /**
  * Show the contact page.
  * @return {JSX} JSX Element.
  */
 export function Contact(): JSX.Element {
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
-  const router = useRouter();
+  const recaptchaRef = useRef<ReCAPTCHA>(null)
+  const router = useRouter()
 
   const {
     register,
@@ -24,25 +24,25 @@ export function Contact(): JSX.Element {
     setValue,
   } = useForm<ContactFormValues>({
     resolver: zodResolver(ContactSchema),
-  });
+  })
 
   const onSubmit = (data: ContactFormValues) => {
-    const { name, message } = data;
+    const { name, message } = data
 
-    const allMessage = `Hey Tote!, soy ${name} y quiero decirte que ${message}`;
+    const allMessage = `Hey Tote!, soy ${name} y quiero decirte que ${message}`
 
     const url = `https://api.whatsapp.com/send?phone=${
       process.env.NEXT_PUBLIC_MY_PHONE_NUMBER
-    }&text=${encodeURIComponent(allMessage)}`;
+    }&text=${encodeURIComponent(allMessage)}`
 
-    window.open(url, "_blank");
-    recaptchaRef.current?.reset();
-    router.push("/");
-  };
+    window.open(url, '_blank')
+    recaptchaRef.current?.reset()
+    router.push('/')
+  }
 
   const handleRecaptcha = (value: string | null) => {
-    setValue("recaptcha", value || "");
-  };
+    setValue('recaptcha', value || '')
+  }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
@@ -53,7 +53,7 @@ export function Contact(): JSX.Element {
         </label>
         <Input
           type="text"
-          {...register("name", { required: true })}
+          {...register('name', { required: true })}
           placeholder="Tu nombre *"
         />
         {errors.name && (
@@ -68,7 +68,7 @@ export function Contact(): JSX.Element {
           Message
         </label>
         <Textarea
-          {...register("message", { required: true })}
+          {...register('message', { required: true })}
           placeholder="Escribe tu mensaje..."
         />
         {errors.message && (
@@ -80,7 +80,7 @@ export function Contact(): JSX.Element {
 
       <div className="flex flex-col gap-1 justify-center items-center">
         <ReCAPTCHA
-          sitekey={process.env.NEXT_PUBLIC_GOOGLE_PUBLIC_SITE_KEY || ""}
+          sitekey={process.env.NEXT_PUBLIC_GOOGLE_PUBLIC_SITE_KEY || ''}
           ref={recaptchaRef}
           onChange={handleRecaptcha}
           theme="dark"
@@ -99,6 +99,7 @@ export function Contact(): JSX.Element {
           className="h-6 w-6 text-white"
           viewBox="0 0 14 14"
         >
+          <title>Enviar mensaje</title>
           <g
             fill="none"
             stroke="currentColor"
@@ -112,5 +113,5 @@ export function Contact(): JSX.Element {
         <span>Press to touch me</span>
       </Button>
     </form>
-  );
+  )
 }

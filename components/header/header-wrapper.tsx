@@ -1,6 +1,6 @@
 type HeaderWrapperProps = {
-  children: JSX.Element;
-};
+  children: JSX.Element
+}
 
 /**
  * Show the header.
@@ -10,5 +10,5 @@ type HeaderWrapperProps = {
 export function HeaderWrapper({ children }: HeaderWrapperProps): JSX.Element {
   return (
     <div className="flex flex-col pt-14 gap-6 mb-4 text-center">{children}</div>
-  );
+  )
 }

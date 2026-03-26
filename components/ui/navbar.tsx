@@ -1,7 +1,7 @@
-"use client";
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+'use client'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Button } from '@/components/ui/button'
 
 /**
  * Show the navbar
@@ -39,5 +39,5 @@ export function Navbar() {
         </li>
       </ul>
     </nav>
-  );
+  )
 }

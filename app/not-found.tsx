@@ -2,5 +2,5 @@
  * Page not found
  */
 export default async function NotFound() {
-  return <div>Page not found</div>;
+  return <div>Page not found</div>
 }

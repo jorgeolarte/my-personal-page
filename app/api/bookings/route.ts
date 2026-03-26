@@ -1,8 +1,8 @@
 type RequestBody = {
-  name: string;
-  phone: string;
-  address: string;
-};
+  name: string
+  phone: string
+  address: string
+}
 
 /**
  * Recieve a POST request with phone, name, and location of a taxi driver
@@ -10,9 +10,9 @@ type RequestBody = {
  * @return {Promise<Response>} The response object.
  */
 export async function POST(request: Request) {
-  const { name, phone, address } = (await request.json()) as RequestBody;
+  const { name, phone, address } = (await request.json()) as RequestBody
 
-  console.log(name, phone, address);
+  console.log(name, phone, address)
 
   return new Response(
     JSON.stringify({
@@ -20,5 +20,5 @@ export async function POST(request: Request) {
       message: `Hey ${name}!, tu movil ha sido confirmado a la dirección ${address}, hemos enviado un mensaje a ${phone} con los detalles de tu viaje.`,
     }),
     { status: 200 }
-  );
+  )
 }

@@ -10,5 +10,5 @@ export function Background(): JSX.Element {
         <div className="w-1/2 h-1/2 bg-radial-gradient from-magenta via-transparent to-transparent rounded-full blur-3xl"></div>
       </div>
     </div>
-  );
+  )
 }

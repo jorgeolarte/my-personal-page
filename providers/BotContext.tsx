@@ -1,29 +1,29 @@
-"use client";
-import React from "react";
-import { ChangeEvent, FormEvent, createContext } from "react";
-import { useChat } from "ai/react";
-import type { ChatRequestOptions, Message } from "ai";
+'use client'
+import type { ChatRequestOptions, Message } from 'ai'
+import { useChat } from 'ai/react'
+import type React from 'react'
+import { type ChangeEvent, createContext, type FormEvent } from 'react'
 
 type BotContextType = {
-  messages: Message[];
-  input: string;
-  handleInputChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  messages: Message[]
+  input: string
+  handleInputChange: (e: ChangeEvent<HTMLInputElement>) => void
   handleSubmit: (
     e: FormEvent<HTMLFormElement>,
     chatRequestOptions?: ChatRequestOptions
-  ) => void;
-  isLoading: boolean;
-};
+  ) => void
+  isLoading: boolean
+}
 
 const initialState: BotContextType = {
   messages: [],
-  input: "",
+  input: '',
   handleInputChange: () => {},
   handleSubmit: () => {},
   isLoading: false,
-};
+}
 
-export const BotContext = createContext<BotContextType>(initialState);
+export const BotContext = createContext<BotContextType>(initialState)
 
 /**
  * Bot provider
@@ -32,7 +32,7 @@ export const BotContext = createContext<BotContextType>(initialState);
  */
 export function BotProvider({ children }: { children: React.ReactNode }) {
   const { messages, input, handleInputChange, handleSubmit, isLoading } =
-    useChat();
+    useChat()
 
   return (
     <BotContext.Provider
@@ -46,5 +46,5 @@ export function BotProvider({ children }: { children: React.ReactNode }) {
     >
       {children}
     </BotContext.Provider>
-  );
+  )
 }
