@@ -42,4 +42,3 @@ const allLinks: AllLink[] = rawLinks
 export const links = {
   allLinks,
 }
-
