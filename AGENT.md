@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Personal portfolio website built with Next.js 14 (App Router), TypeScript, and Tailwind CSS. Los links del sitio se configuran desde `src/data/links.json`. The site includes a chatbot feature using Groq's LLaMA model through the Vercel AI SDK.
+Personal portfolio website built with Next.js 14 (App Router), TypeScript, and Tailwind CSS. Los links del sitio se configuran desde `src/data/links.json`.
 
 ## Development Commands
 
@@ -36,15 +36,9 @@ All checks must pass before commits are allowed. The hook provides colorful erro
 
 ### Directory Structure
 - `app/` - Next.js App Router pages and API routes
-  - `api/chat/route.ts` - Streaming AI chatbot endpoint using Groq/LLaMA
-  - `api/bookings/route.ts` - Demo taxi booking endpoint
-  - `bot/page.tsx` - Chatbot interface page
-  - `contact/page.tsx` - Contact form page
   - `layout.tsx` - Root layout with Montserrat font
   - `page.tsx` - Home page
 - `components/` - React components organized by feature
-  - `bot/` - Chatbot UI components
-  - `contact/` - Contact form components
   - `header/` - Header and image components
   - `main/` - Main content and social buttons
   - `ui/` - Reusable UI components (shadcn/ui style)
@@ -53,7 +47,6 @@ All checks must pass before commits are allowed. The hook provides colorful erro
 - `lib/` - Utilities
   - `utils.ts` - Utility functions (includes `cn()` for class merging)
 - `hooks/` - Custom React hooks
-- `providers/` - Context providers
 - `schema/` - Validation schemas
 - `public/` - Static assets
 
@@ -62,9 +55,6 @@ All checks must pass before commits are allowed. The hook provides colorful erro
 **Path Aliases**: `@/*` maps to project root (see `tsconfig.json`)
 
 **Links configuration**: Los links del home se cargan desde el archivo JSON local `src/data/links.json` (no requiere env vars).
-
-**AI Chatbot**: Uses Groq API (not OpenAI) with LLaMA 3 model. The chatbot is configured as a Spanish-language taxi booking assistant. Requires:
-- `GROQ_API_KEY` environment variable
 
 **Styling**: Tailwind CSS with custom theme including:
 - HSL-based color system with CSS variables
@@ -92,5 +82,4 @@ All checks must pass before commits are allowed. The hook provides colorful erro
 - The project uses Next.js App Router (not Pages Router)
 - Server Actions must be marked with `"use server"` directive
 - Los links del home se cargan desde el JSON local `src/data/links.json`
-- The chatbot system prompt is in Spanish and configured for taxi booking workflow
 - Husky pre-commit hook is comprehensive and will block commits that don't pass all checks
