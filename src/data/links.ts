@@ -1,4 +1,6 @@
-import linksJson from './links.json'
+import linksEnJson from './links.en.json'
+import linksEsJson from './links.es.json'
+import type { Locale } from '@/src/i18n/messages'
 
 type LinkType = 'social' | 'content'
 
@@ -25,20 +27,28 @@ function normalizeIconPath(icon: string): string {
   return icon.startsWith('/') ? icon : `/${icon}`
 }
 
-const rawLinks = linksJson as RawLink[]
-
-const allLinks: AllLink[] = rawLinks
-  .slice()
-  .sort((a, b) => a.orden - b.orden)
-  .map((link) => ({
-    title: link.text,
-    url: link.url,
-    target: link.target,
-    icon: normalizeIconPath(link.icon),
-    active: true,
-    social: link.type === 'social',
-  }))
-
-export const links = {
-  allLinks,
+function normalizeLinks(rawLinks: RawLink[]): AllLink[] {
+  return rawLinks
+    .slice()
+    .sort((a, b) => a.orden - b.orden)
+    .map((link) => ({
+      title: link.text,
+      url: link.url,
+      target: link.target,
+      icon: normalizeIconPath(link.icon),
+      active: true,
+      social: link.type === 'social',
+    }))
 }
+
+const rawLinksEn = linksEnJson as RawLink[]
+const rawLinksEs = linksEsJson as RawLink[]
+
+export function getLinks(locale: Locale) {
+  return {
+    allLinks: locale === 'es' ? normalizeLinks(rawLinksEs) : normalizeLinks(rawLinksEn),
+  }
+}
+
+// Backwards-compat default export for existing imports (English).
+export const links = getLinks('en')

@@ -9,9 +9,9 @@ import { Footer } from '@/components/ui/footer'
 export default function HomePage(): JSX.Element {
   return (
     <>
-      <Header />
-      <Main />
-      <Footer />
+      <Header locale="en" />
+      <Main locale="en" />
+      <Footer locale="en" />
     </>
   )
 }
