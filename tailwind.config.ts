@@ -26,11 +26,6 @@ const config = {
         '2xl': '1400px',
       },
     },
-    backgroundImage: {
-      'linear-gradient': 'linear-gradient(to right, var(--tw-gradient-stops))',
-      'radial-gradient':
-        'radial-gradient(circle at center, var(--tw-gradient-stops))',
-    },
     extend: {
       colors: {
         border: 'hsl(var(--border))',
@@ -92,31 +87,10 @@ const config = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: '0' },
         },
-        rotate: {
-          '0%': {
-            transform: 'rotate(0deg)',
-          },
-          '50%': {
-            transform: 'rotate(180deg)',
-          },
-          '100%': {
-            transform: 'rotate(360deg)',
-          },
-        },
-        beat: {
-          '0%, 100%': {
-            transform: 'scale( .95 )',
-          },
-          '50%': {
-            transform: 'scale( 1 )',
-          },
-        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        rotate: 'rotate 8s linear infinite',
-        pulse: 'beat 1s infinite',
       },
     },
   },
