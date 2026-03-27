@@ -1,27 +1,29 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
 import './globals.css'
 import { Montserrat as FontSans } from 'next/font/google'
 import { Background } from '@/components/ui/background'
 import { Container } from '@/components/ui/container'
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#000000',
+}
+
 export const metadata: Metadata = {
-  title: 'Jorge Olarte | Software Developer',
+  metadataBase: new URL('https://jorgeolarte.com'),
+  title: {
+    default: 'Jorge Olarte',
+    template: '%s | Jorge Olarte',
+  },
   description: 'Following my heart ❤️ since I was born',
   openGraph: {
     type: 'website',
     locale: 'en_US',
     url: 'https://jorgeolarte.com',
-    title: 'Jorge Olarte | Software Developer',
+    title: 'Jorge Olarte',
     description: 'Following my heart ❤️ since I was born',
-    images: [
-      {
-        url: 'https://jorgeolarte.com/jorge-olarte.jpg',
-        width: 800,
-        height: 800,
-        alt: 'Jorge Olarte',
-      },
-    ],
     siteName: 'Jorge Olarte',
   },
   keywords: [
