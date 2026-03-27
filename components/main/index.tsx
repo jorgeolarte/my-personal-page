@@ -16,8 +16,12 @@ export function Main({ locale }: { locale: Locale }): JSX.Element {
     <div className="flex flex-col gap-8 text-center">
       <div className="space-y-4">
         <h2 className="font-display">{messages.main.contentCtaTitle}</h2>
-        {otherLinks.map((link) => (
-          <SocialButton key={link.title} {...link} />
+        {otherLinks.map((link, index) => (
+          <SocialButton
+            key={link.title}
+            {...link}
+            variant={index === 0 ? 'primary' : 'secondary'}
+          />
         ))}
       </div>
 
@@ -27,7 +31,7 @@ export function Main({ locale }: { locale: Locale }): JSX.Element {
         </h3>
         <div className="flex flex-row gap-2 justify-center">
           {socialLinks.map((link) => (
-            <SocialButton key={link.title} {...link} />
+            <SocialButton key={link.title} {...link} variant="ghost" />
           ))}
         </div>
       </div>

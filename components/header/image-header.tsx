@@ -46,7 +46,7 @@ export function ImageHeader({
             <span
               aria-label={flagLabel}
               role="img"
-              className="w-7 h-7 md:w-9 md:h-9 aspect-square rounded-full flex items-center justify-center leading-none text-base md:text-lg bg-gray"
+              className="w-7 h-7 md:w-9 md:h-9 aspect-square rounded-full flex items-center justify-center leading-none text-base md:text-lg bg-accent border border-white/10 hover:border-magenta/50 transition-colors"
             >
               {flag}
             </span>

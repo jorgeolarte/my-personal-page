@@ -13,11 +13,8 @@ const config = {
   theme: {
     colors: {
       transparent: 'transparent',
-      // magenta: "#C621E5",
-      // violet: "#720CD4",
       white: '#ffffff',
       black: '#000000',
-      gray: '#3a3a3a',
     },
     container: {
       center: true,
@@ -35,39 +32,18 @@ const config = {
         foreground: 'hsl(var(--foreground))',
         magenta: {
           DEFAULT: 'hsl(var(--magenta))',
+          hover: 'hsl(var(--magenta-hover))',
           foreground: 'hsl(var(--magenta-foreground))',
         },
         violet: {
           DEFAULT: 'hsl(var(--violet))',
+          hover: 'hsl(var(--violet-hover))',
           foreground: 'hsl(var(--violet-foreground))',
-        },
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
-        },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
-        },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
         },
         accent: {
           DEFAULT: 'hsl(var(--accent))',
+          hover: 'hsl(var(--accent-hover))',
           foreground: 'hsl(var(--accent-foreground))',
-        },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))',
-        },
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
         },
       },
       fontFamily: {
