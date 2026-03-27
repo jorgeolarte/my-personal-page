@@ -45,14 +45,6 @@ export async function generateMetadata({
       url: canonical,
       title,
       description,
-      images: [
-        {
-          url: 'https://jorgeolarte.com/jorge-olarte.jpg',
-          width: 800,
-          height: 800,
-          alt: 'Jorge Olarte',
-        },
-      ],
       siteName: 'Jorge Olarte',
     },
   }
