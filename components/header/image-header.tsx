@@ -53,9 +53,11 @@ export function ImageHeader({
           </Link>
         </div>
       </div>
-      <div className="flex flex-col gap-2">
-        <h1>Jorge Olarte</h1>
-        <h3>{messages.header.role}</h3>
+      <div className="flex flex-col gap-3">
+        <h1 className="font-display">Jorge Olarte</h1>
+        <h2 className="font-display font-medium text-white/80">
+          {messages.header.role}
+        </h2>
       </div>
     </div>
   )

@@ -71,7 +71,9 @@ const config = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-sans)', ...fontFamily.sans],
+        display: ['var(--font-display)', ...fontFamily.sans],
+        body: ['var(--font-body)', ...fontFamily.sans],
+        sans: ['var(--font-body)', ...fontFamily.sans],
       },
       borderRadius: {
         lg: 'var(--radius)',
