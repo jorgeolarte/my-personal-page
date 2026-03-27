@@ -1,8 +1,8 @@
 import { getMessages, type Locale } from '@/src/i18n/messages'
 
 /**
- * Show the footer
- * @return {JSX.Element} The sum of the two numbers.
+ * Footer component with credits.
+ * @return {JSX.Element} The footer component.
  */
 export function Footer({ locale }: { locale: Locale }): JSX.Element {
   const messages = getMessages(locale)

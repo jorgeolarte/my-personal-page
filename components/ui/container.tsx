@@ -5,9 +5,9 @@ type Props = {
 }
 
 /**
- * Show the container.
+ * Container component that centers and constrains content width.
  * @param {ReactNode} children - The children of the container.
- * @return {JSX.Element} The sum of the two numbers.
+ * @return {JSX.Element} The container component.
  */
 export function Container({ children }: Props): JSX.Element {
   return (

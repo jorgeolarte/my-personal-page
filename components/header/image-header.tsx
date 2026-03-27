@@ -3,8 +3,8 @@ import Link from 'next/link'
 import type { Locale, Messages } from '@/src/i18n/messages'
 
 /**
- * Show the image header.
- * @return {JSX.Element} The sum of the two numbers.
+ * Profile image with name, role, and language switcher.
+ * @return {JSX.Element} The image header component.
  */
 export function ImageHeader({
   messages,
@@ -28,10 +28,10 @@ export function ImageHeader({
   return (
     <div className="flex flex-col gap-6 items-center">
       <div className="relative">
-        <Link href={homeHref} className="cursor-pointer">
+        <Link href={homeHref} className="cursor-pointer group/image">
           <Image
             src="/jorge-olarte-pic.jpg"
-            className="w-36 md:w-48 rounded-full ring-2 ring-white/5"
+            className="w-36 md:w-48 rounded-full ring-2 ring-white/5 group-hover/image:ring-white/10 transition-all duration-200"
             alt="Jorge Olarte"
             width={192}
             height={192}
@@ -46,7 +46,7 @@ export function ImageHeader({
             <span
               aria-label={flagLabel}
               role="img"
-              className="w-8 h-8 md:w-10 md:h-10 aspect-square rounded-full flex items-center justify-center leading-none text-base md:text-lg bg-accent border border-white/10 group-hover:border-magenta/50 transition-colors shadow-lg"
+              className="w-8 h-8 md:w-10 md:h-10 aspect-square rounded-full flex items-center justify-center leading-none text-base md:text-lg bg-accent border border-white/10 group-hover:border-magenta/50 group-hover:scale-105 transition-all duration-200 shadow-lg"
             >
               {flag}
             </span>

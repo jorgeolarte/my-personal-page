@@ -3,8 +3,8 @@ import { ImageHeader } from '@/components/header/image-header'
 import { getMessages, type Locale } from '@/src/i18n/messages'
 
 /**
- * Show the header.
- * @return {JSX.Element} The sum of the two numbers.
+ * Header component with profile and description.
+ * @return {JSX.Element} The header component.
  */
 export function Header({ locale }: { locale: Locale }): JSX.Element {
   const messages = getMessages(locale)
