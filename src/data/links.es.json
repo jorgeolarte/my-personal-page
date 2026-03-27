@@ -1,0 +1,43 @@
+[
+  {
+    "type": "content",
+    "url": "https://thetribu.dev",
+    "text": "Suscríbete a mi newsletter",
+    "target": "_self",
+    "icon": "email.svg",
+    "orden": 1
+  },
+  {
+    "type": "content",
+    "url": "https://thetribu.dev/podcast",
+    "text": "Escucha Impulsa Tu Carrera Tech",
+    "target": "_self",
+    "icon": "send-me-message.svg",
+    "orden": 2
+  },
+  {
+    "type": "social",
+    "url": "https://www.linkedin.com/in/jorgeduardolarte/",
+    "text": "Linkedin",
+    "target": "_blank",
+    "icon": "linkedin.svg",
+    "orden": 1
+  },
+  {
+    "type": "social",
+    "url": "https://www.github.com/jorgeolarte",
+    "text": "GitHub",
+    "target": "_blank",
+    "icon": "github.svg",
+    "orden": 2
+  },
+  {
+    "type": "social",
+    "url": "https://www.instagram.com/jorgeolarte",
+    "text": "Instagram",
+    "target": "_blank",
+    "icon": "instagram.svg",
+    "orden": 3
+  }
+]
+
