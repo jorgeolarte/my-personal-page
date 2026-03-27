@@ -9,6 +9,7 @@ type Props = {
   icon: string
   social: boolean
   variant?: 'default' | 'primary' | 'secondary' | 'outline' | 'ghost' | 'link'
+  isPrimary?: boolean
 }
 
 /**
@@ -24,11 +25,20 @@ export function SocialButton({
   icon,
   social,
   variant = 'default',
+  isPrimary = false,
 }: Props): JSX.Element {
+  const buttonClass = social
+    ? 'w-auto'
+    : isPrimary
+      ? 'w-full'
+      : 'w-full max-w-md'
+
+  const buttonSize = isPrimary ? 'lg' : 'default'
+
   return (
-    <Button className="w-full" variant={variant}>
+    <Button className={buttonClass} variant={variant} size={buttonSize}>
       <Link
-        className="flex flex-row gap-2 items-center"
+        className="flex flex-row gap-2.5 items-center"
         href={url}
         target={target}
         rel="noreferrer"

@@ -13,23 +13,26 @@ export function Main({ locale }: { locale: Locale }): JSX.Element {
   const otherLinks = linksConfig.allLinks.filter((link) => !link.social)
 
   return (
-    <div className="flex flex-col gap-8 text-center">
-      <div className="space-y-4">
-        <h2 className="font-display">{messages.main.contentCtaTitle}</h2>
-        {otherLinks.map((link, index) => (
-          <SocialButton
-            key={link.title}
-            {...link}
-            variant={index === 0 ? 'primary' : 'secondary'}
-          />
-        ))}
+    <div className="flex flex-col gap-12 text-center w-full">
+      <div className="space-y-5">
+        <h2 className="font-display mb-2">{messages.main.contentCtaTitle}</h2>
+        <div className="space-y-3">
+          {otherLinks.map((link, index) => (
+            <SocialButton
+              key={link.title}
+              {...link}
+              variant={index === 0 ? 'primary' : 'secondary'}
+              isPrimary={index === 0}
+            />
+          ))}
+        </div>
       </div>
 
-      <div className="space-y-4">
+      <div className="space-y-5">
         <h3 className="font-display text-white/80">
           {messages.main.socialCtaTitle}
         </h3>
-        <div className="flex flex-row gap-2 justify-center">
+        <div className="flex flex-row gap-3 justify-center flex-wrap">
           {socialLinks.map((link) => (
             <SocialButton key={link.title} {...link} variant="ghost" />
           ))}

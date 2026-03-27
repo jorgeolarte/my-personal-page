@@ -26,34 +26,34 @@ export function ImageHeader({
     locale === 'es' ? 'Cambiar idioma a English' : 'Switch language to Español'
 
   return (
-    <div className="flex flex-col gap-8 items-center">
+    <div className="flex flex-col gap-6 items-center">
       <div className="relative">
         <Link href={homeHref} className="cursor-pointer">
           <Image
             src="/jorge-olarte-pic.jpg"
-            className="w-32 md:w-44 rounded-full"
+            className="w-36 md:w-48 rounded-full ring-2 ring-white/5"
             alt="Jorge Olarte"
-            width={176}
-            height={176}
+            width={192}
+            height={192}
           />
         </Link>
-        <div className="absolute bottom-1 right-1 md:bottom-2 md:right-2">
+        <div className="absolute bottom-2 right-2 md:bottom-3 md:right-3">
           <Link
             href={toggleHref}
-            className="cursor-pointer"
+            className="cursor-pointer group"
             aria-label={toggleLabel}
           >
             <span
               aria-label={flagLabel}
               role="img"
-              className="w-7 h-7 md:w-9 md:h-9 aspect-square rounded-full flex items-center justify-center leading-none text-base md:text-lg bg-accent border border-white/10 hover:border-magenta/50 transition-colors"
+              className="w-8 h-8 md:w-10 md:h-10 aspect-square rounded-full flex items-center justify-center leading-none text-base md:text-lg bg-accent border border-white/10 group-hover:border-magenta/50 transition-colors shadow-lg"
             >
               {flag}
             </span>
           </Link>
         </div>
       </div>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-2">
         <h1 className="font-display">Jorge Olarte</h1>
         <h2 className="font-display font-medium text-white/80">
           {messages.header.role}

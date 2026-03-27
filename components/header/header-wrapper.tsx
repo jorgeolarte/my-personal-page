@@ -10,7 +10,5 @@ type HeaderWrapperProps = {
  * @return {JSX.Element} The sum of the two numbers.
  */
 export function HeaderWrapper({ children }: HeaderWrapperProps): JSX.Element {
-  return (
-    <div className="flex flex-col pt-14 gap-6 mb-4 text-center">{children}</div>
-  )
+  return <div className="flex flex-col gap-8 text-center">{children}</div>
 }

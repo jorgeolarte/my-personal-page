@@ -13,10 +13,16 @@ export function Header({ locale }: { locale: Locale }): JSX.Element {
   return (
     <HeaderWrapper>
       <ImageHeader messages={messages} homeHref={homeHref} locale={locale} />
-      <div className="space-y-1.5">
-        <p className="font-body text-white/70">{messages.header.line1}</p>
-        <p className="font-body text-white/70">{messages.header.line2}</p>
-        <p className="font-body text-white/70">{messages.header.line3}</p>
+      <div className="space-y-1 max-w-md">
+        <p className="font-body text-base text-white/70 leading-relaxed">
+          {messages.header.line1}
+        </p>
+        <p className="font-body text-base text-white/70 leading-relaxed">
+          {messages.header.line2}
+        </p>
+        <p className="font-body text-base text-white/70 leading-relaxed">
+          {messages.header.line3}
+        </p>
       </div>
     </HeaderWrapper>
   )
