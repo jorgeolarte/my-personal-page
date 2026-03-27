@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import type { ReactNode } from 'react'
 import './globals.css'
-import { Montserrat as FontSans } from 'next/font/google'
+import { Space_Grotesk, Work_Sans } from 'next/font/google'
 import { Background } from '@/components/ui/background'
 import { Container } from '@/components/ui/container'
 
@@ -49,10 +49,18 @@ export const metadata: Metadata = {
   ],
 }
 
-const fontSans = FontSans({
-  weight: ['300', '400', '500', '700'],
+const fontDisplay = Space_Grotesk({
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
-  variable: '--font-sans',
+  variable: '--font-display',
+  display: 'swap',
+})
+
+const fontBody = Work_Sans({
+  weight: ['400', '500', '600'],
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
 })
 
 export default function RootLayout({
@@ -61,8 +69,11 @@ export default function RootLayout({
   children: ReactNode
 }): JSX.Element {
   return (
-    <html lang="en" className={fontSans.variable}>
+    <html lang="en" className={`${fontDisplay.variable} ${fontBody.variable}`}>
       <body>
+        <a href="#main-content" className="skip-link">
+          Skip to main content
+        </a>
         <div className="text-white">
           <Background />
           <Container>{children}</Container>

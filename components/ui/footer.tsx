@@ -1,22 +1,22 @@
 import { getMessages, type Locale } from '@/src/i18n/messages'
 
 /**
- * Show the footer
- * @return {JSX.Element} The sum of the two numbers.
+ * Footer component with credits.
+ * @return {JSX.Element} The footer component.
  */
 export function Footer({ locale }: { locale: Locale }): JSX.Element {
   const messages = getMessages(locale)
 
   return (
-    <div className="mt-10 pb-4 text-center">
-      <p className="text-xs font-light">
+    <footer className="mt-auto pt-16 text-center space-y-0.5">
+      <p className="font-body text-sm text-white/50">
         {messages.footer.developedBy}{' '}
-        <span className="font-medium">Jorge Olarte</span>
+        <span className="text-white/70 font-medium">Jorge Olarte</span>
       </p>
-      <p className="text-xs font-light">
+      <p className="font-body text-sm text-white/50">
         {messages.footer.designedBy}{' '}
-        <span className="font-medium">Jhony Espinosa</span>
+        <span className="text-white/70 font-medium">Jhony Espinosa</span>
       </p>
-    </div>
+    </footer>
   )
 }

@@ -5,7 +5,7 @@
     "text": "Subscribe to my newsletter",
     "target": "_self",
     "icon": "email.svg",
-    "orden": 1
+    "orden": 2
   },
   {
     "type": "content",
@@ -13,7 +13,7 @@
     "text": "Listen Impulsa Tu Carrera Tech",
     "target": "_self",
     "icon": "send-me-message.svg",
-    "orden": 2
+    "orden": 1
   },
   {
     "type": "social",

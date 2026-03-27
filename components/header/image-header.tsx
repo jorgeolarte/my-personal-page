@@ -3,8 +3,8 @@ import Link from 'next/link'
 import type { Locale, Messages } from '@/src/i18n/messages'
 
 /**
- * Show the image header.
- * @return {JSX.Element} The sum of the two numbers.
+ * Profile image with name, role, and language switcher.
+ * @return {JSX.Element} The image header component.
  */
 export function ImageHeader({
   messages,
@@ -26,30 +26,27 @@ export function ImageHeader({
     locale === 'es' ? 'Cambiar idioma a English' : 'Switch language to Español'
 
   return (
-    <div className="flex flex-col gap-8 items-center">
+    <div className="flex flex-col gap-6 items-center">
       <div className="relative">
-        <div className="relative">
-          <div className="absolute -z-10 w-32 h-32 md:w-44 md:h-44 bg-linear-gradient from-magenta to-violet animate-rotate rounded-full blur-xl"></div>
-          <Link href={homeHref} className="cursor-pointer">
-            <Image
-              src="/jorge-olarte-pic.jpg"
-              className="w-32 md:w-44 rounded-full"
-              alt="Jorge Olarte"
-              width={176}
-              height={176}
-            />
-          </Link>
-        </div>
-        <div className="absolute bottom-1 right-1 md:bottom-2 md:right-2 animate-pulse">
+        <Link href={homeHref} className="cursor-pointer group/image">
+          <Image
+            src="/jorge-olarte-pic.jpg"
+            className="w-36 md:w-48 rounded-full ring-2 ring-white/5 group-hover/image:ring-white/10 transition-all duration-200"
+            alt="Jorge Olarte"
+            width={192}
+            height={192}
+          />
+        </Link>
+        <div className="absolute bottom-2 right-2 md:bottom-3 md:right-3">
           <Link
             href={toggleHref}
-            className="cursor-pointer"
+            className="cursor-pointer group"
             aria-label={toggleLabel}
           >
             <span
               aria-label={flagLabel}
               role="img"
-              className="w-7 h-7 md:w-9 md:h-9 aspect-square rounded-full flex items-center justify-center leading-none text-base md:text-lg bg-gray"
+              className="w-8 h-8 md:w-10 md:h-10 aspect-square rounded-full flex items-center justify-center leading-none text-base md:text-lg bg-accent border border-white/10 group-hover:border-magenta/50 group-hover:scale-105 transition-all duration-200 shadow-lg"
             >
               {flag}
             </span>
@@ -57,8 +54,10 @@ export function ImageHeader({
         </div>
       </div>
       <div className="flex flex-col gap-2">
-        <h1>Jorge Olarte</h1>
-        <h3>{messages.header.role}</h3>
+        <h1 className="font-display">Jorge Olarte</h1>
+        <h2 className="font-display font-medium text-white/80">
+          {messages.header.role}
+        </h2>
       </div>
     </div>
   )

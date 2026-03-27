@@ -1,0 +1,56 @@
+# GitHub Copilot Instructions
+
+## Design Context
+
+### Users
+**Primary audience:** Tech recruiters and hiring managers evaluating Jorge's skills, experience, and cultural fit. They're making quick judgments about whether to reach out for opportunities, looking for signals of competence, creativity, and professionalism.
+
+**Context:** First impression matters. Visitors are likely comparing multiple candidates, so the site needs to be memorable while remaining credible. They want to quickly assess technical skills, see work examples, and find ways to connect.
+
+**Job to be done:** Evaluate Jorge as a potential hire or collaboration partner, and make it easy to reach out.
+
+### Brand Personality
+**Voice:** Passionate, Authentic, Driven
+**Tone:** Creative energy — vibrant, expressive, bold. Someone who thinks differently and brings fresh ideas while maintaining professional credibility.
+
+**Emotional goal:** Visitors should feel Jorge's creative energy and passion. The site should convey someone who "follows their heart ❤️" (as the tagline states) while demonstrating technical mastery and professional polish.
+
+### Aesthetic Direction
+**Visual tone:** Clean, minimal foundation with bold, creative moments. Think refined minimalism with strategic bursts of energy — not generic portfolio template, but intentional restraint punctuated by vibrant personality.
+
+**Theme:** Dark mode only — modern, focused, confident. Creates a canvas for vibrant colors to truly shine.
+
+**Color palette:** Refine the existing magenta/violet gradient into a more sophisticated, perceptually uniform palette using OKLCH. Maintain the vibrant, passionate energy but improve contrast and harmony for WCAG AAA compliance. The gradient represents creative energy and should be used strategically, not everywhere.
+
+**Typography:** Move away from default system fonts. Choose a distinctive display font that conveys creativity paired with a refined, readable body font. Implement a modular type scale with fluid sizing for hierarchy.
+
+**Anti-references:**
+- Generic developer portfolios with card grids and icon + heading + text layouts
+- Over-glassmorphism or blurred effects used decoratively
+- Cookie-cutter hero sections with metrics
+- Safe, forgettable layouts that could be anyone's site
+
+### Design Principles
+
+1. **Strategic Boldness** — Use vibrant colors and creative moments intentionally, not everywhere. Let whitespace and restraint make the bold elements sing.
+
+2. **Heart-First, Head-Second** — The tagline "Following my heart ❤️ since I was born" is core to Jorge's brand. Design should feel passionate and authentic first, polished second. Emotion over perfection.
+
+3. **Memorable Minimalism** — Clean doesn't mean boring. Every element should have a clear purpose, but the few elements present should be distinctive and memorable.
+
+4. **Accessible Energy** — Creative energy shouldn't sacrifice accessibility. Maintain WCAG AAA compliance (7:1 contrast), support reduced motion, and ensure keyboard navigation works flawlessly.
+
+5. **Fluid & Responsive** — The site should feel natural at every viewport size. Use fluid typography and spacing that breathes on larger screens and adapts gracefully to mobile.
+
+### Technical Constraints
+- Next.js 16 (App Router) with TypeScript
+- Tailwind CSS with existing shadcn/ui component foundation
+- Bilingual support (English/Spanish)
+- Must pass pre-commit checks (Biome, TypeScript, build)
+- WCAG AAA compliance required (7:1 contrast)
+- Reduced motion support required
+
+### Key Differentiators
+**What makes this unforgettable:** The intersection of creative passion and technical precision. Not just another developer portfolio — this is someone who brings both heart and skill to their work. The design should feel like Jorge: vibrant personality grounded in solid execution.
+
+**The one thing someone will remember:** The bold, refined use of the magenta/violet gradient as an accent that represents creative energy — used sparingly but memorably against a sophisticated dark background.

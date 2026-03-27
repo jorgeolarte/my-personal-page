@@ -13,22 +13,38 @@ export function Main({ locale }: { locale: Locale }): JSX.Element {
   const otherLinks = linksConfig.allLinks.filter((link) => !link.social)
 
   return (
-    <div className="flex flex-col gap-6 text-center ">
-      <div className="space-y-4">
-        <h2>{messages.main.contentCtaTitle}</h2>
-        {otherLinks.map((link) => (
-          <SocialButton key={link.title} {...link} />
-        ))}
-      </div>
-
-      <div className="space-y-4">
-        <h3>{messages.main.socialCtaTitle}</h3>
-        <div className="flex flex-row gap-2">
-          {socialLinks.map((link) => (
-            <SocialButton key={link.title} {...link} />
-          ))}
+    <div className="flex flex-col gap-12 text-center w-full">
+      <nav aria-label={messages.main.contentCtaTitle}>
+        <div className="space-y-5">
+          <h2 className="font-display mb-2">{messages.main.contentCtaTitle}</h2>
+          <ul className="space-y-3 list-none">
+            {otherLinks.map((link, index) => (
+              <li key={link.title}>
+                <SocialButton
+                  {...link}
+                  variant={index === 0 ? 'primary' : 'secondary'}
+                  isPrimary={index === 0}
+                />
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
+      </nav>
+
+      <nav aria-label={messages.main.socialCtaTitle}>
+        <div className="space-y-5">
+          <h3 className="font-display text-white/80">
+            {messages.main.socialCtaTitle}
+          </h3>
+          <ul className="flex flex-row gap-3 justify-center flex-wrap list-none">
+            {socialLinks.map((link) => (
+              <li key={link.title}>
+                <SocialButton {...link} variant="ghost" />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
     </div>
   )
 }

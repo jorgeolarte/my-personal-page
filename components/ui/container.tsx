@@ -5,13 +5,13 @@ type Props = {
 }
 
 /**
- * Show the container.
+ * Container component that centers and constrains content width.
  * @param {ReactNode} children - The children of the container.
- * @return {JSX.Element} The sum of the two numbers.
+ * @return {JSX.Element} The container component.
  */
 export function Container({ children }: Props): JSX.Element {
   return (
-    <div className="flex flex-col justify-start items-center gap-4 h-screen max-h-min max-w-md mx-auto px-4">
+    <div className="flex flex-col justify-start items-center gap-12 min-h-screen max-w-lg mx-auto px-6 py-12">
       {children}
     </div>
   )

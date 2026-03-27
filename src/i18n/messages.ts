@@ -21,15 +21,15 @@ export type Messages = {
 export const messagesByLocale: Record<Locale, Messages> = {
   en: {
     header: {
-      line1: '💻 MSc In Software Engineering just because',
-      line2: '🤓 Following my heart since I was born',
-      line3: '😎 I found out my purpose helping others',
+      line1: 'MSc in Software Engineering',
+      line2: 'Following my heart since I was born',
+      line3: 'Building tech that helps others grow',
       role: 'Software Developer',
       imageAlt: 'Following my heart',
     },
     main: {
-      contentCtaTitle: 'Check out this',
-      socialCtaTitle: 'Follow me',
+      contentCtaTitle: "What I'm building",
+      socialCtaTitle: "Let's connect",
     },
     footer: {
       developedBy: 'Developed with ❤️ by',
@@ -38,15 +38,15 @@ export const messagesByLocale: Record<Locale, Messages> = {
   },
   es: {
     header: {
-      line1: '💻 MSc en Ingeniería de Software porque sí',
-      line2: '🤓 Siguiendo mi corazón desde que nací',
-      line3: '😎 Descubrí mi propósito ayudando a otros',
+      line1: 'Máster en Ingeniería de Software',
+      line2: 'Siguiendo mi corazón desde que nací',
+      line3: 'Construyendo tecnología que ayuda a crecer',
       role: 'Desarrollador de Software',
       imageAlt: 'Siguiendo mi corazón',
     },
     main: {
-      contentCtaTitle: 'Mira esto',
-      socialCtaTitle: 'Sígueme',
+      contentCtaTitle: 'Lo que construyo',
+      socialCtaTitle: 'Conectemos',
     },
     footer: {
       developedBy: 'Desarrollado con ❤️ por',
