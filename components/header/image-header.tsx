@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import type { Messages } from '@/src/i18n/messages'
-import type { Locale } from '@/src/i18n/messages'
+import type { Locale, Messages } from '@/src/i18n/messages'
 
 /**
  * Show the image header.
@@ -17,10 +16,11 @@ export function ImageHeader({
   locale: Locale
 }): JSX.Element {
   const flag = locale === 'es' ? '🇨🇴' : '🇺🇸'
-  const flagLabel = locale === 'es' ? 'Español (Colombia)' : 'English (United States)'
+  const flagLabel =
+    locale === 'es' ? 'Español (Colombia)' : 'English (United States)'
   const toggleHref =
     locale === 'es'
-      ? `/locale/en?next=${encodeURIComponent('/')}`
+      ? `/locale/en?next=${encodeURIComponent('/en')}`
       : `/locale/es?next=${encodeURIComponent('/es')}`
   const toggleLabel =
     locale === 'es' ? 'Cambiar idioma a English' : 'Switch language to Español'
@@ -41,7 +41,11 @@ export function ImageHeader({
           </Link>
         </div>
         <div className="absolute bottom-1 right-1 md:bottom-2 md:right-2 animate-pulse">
-          <Link href={toggleHref} className="cursor-pointer" aria-label={toggleLabel}>
+          <Link
+            href={toggleHref}
+            className="cursor-pointer"
+            aria-label={toggleLabel}
+          >
             <span
               aria-label={flagLabel}
               role="img"

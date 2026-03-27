@@ -1,6 +1,6 @@
+import type { Locale } from '@/src/i18n/messages'
 import linksEnJson from './links.en.json'
 import linksEsJson from './links.es.json'
-import type { Locale } from '@/src/i18n/messages'
 
 type LinkType = 'social' | 'content'
 
@@ -46,7 +46,8 @@ const rawLinksEs = linksEsJson as RawLink[]
 
 export function getLinks(locale: Locale) {
   return {
-    allLinks: locale === 'es' ? normalizeLinks(rawLinksEs) : normalizeLinks(rawLinksEn),
+    allLinks:
+      locale === 'es' ? normalizeLinks(rawLinksEs) : normalizeLinks(rawLinksEn),
   }
 }
 

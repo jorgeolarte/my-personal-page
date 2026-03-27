@@ -9,27 +9,28 @@ function isLocale(value: string): value is Locale {
 
 export function GET(
   request: NextRequest,
-  context: { params: Promise<{ lang: string }> },
+  { params }: { params: Promise<{ lang: string }> }
 ) {
   // Next.js 15+ makes `params` async.
   // In Next.js 16 this signature is required for type-checking.
-  const langPromise = context.params
-  return langPromise.then(({ lang }) => {
-  if (!isLocale(lang)) return NextResponse.redirect(new URL('/', request.url))
+  return params.then(({ lang }) => {
+    if (!isLocale(lang)) return NextResponse.redirect(new URL('/', request.url))
 
-  const nextParam = request.nextUrl.searchParams.get('next')
-  const safeNext =
-    nextParam && nextParam.startsWith('/') ? nextParam : lang === 'es' ? '/es' : '/'
+    const nextParam = request.nextUrl.searchParams.get('next')
+    const safeNext = nextParam?.startsWith('/')
+      ? nextParam
+      : lang === 'es'
+        ? '/es'
+        : '/en'
 
-  const url = new URL(safeNext, request.url)
-  const response = NextResponse.redirect(url)
-  response.cookies.set('locale', lang, {
-    path: '/',
-    sameSite: 'lax',
-    httpOnly: true,
-    maxAge: 60 * 60 * 24 * 365,
-  })
-  return response
+    const url = new URL(safeNext, request.url)
+    const response = NextResponse.redirect(url)
+    response.cookies.set('locale', lang, {
+      path: '/',
+      sameSite: 'lax',
+      httpOnly: true,
+      maxAge: 60 * 60 * 24 * 365,
+    })
+    return response
   })
 }
-

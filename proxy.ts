@@ -19,13 +19,19 @@ export function proxy(request: NextRequest) {
   // Only auto-redirect on the root route.
   if (pathname !== '/') return NextResponse.next()
 
-  const cookieLocale = request.cookies.get('locale')?.value as Locale | undefined
+  const cookieLocale = request.cookies.get('locale')?.value as
+    | Locale
+    | undefined
   if (cookieLocale === 'es') {
     const url = request.nextUrl.clone()
     url.pathname = '/es'
     return NextResponse.redirect(url)
   }
-  if (cookieLocale === 'en') return NextResponse.next()
+  if (cookieLocale === 'en') {
+    const url = request.nextUrl.clone()
+    url.pathname = '/en'
+    return NextResponse.redirect(url)
+  }
 
   const preferred = parsePreferredLocale(request.headers.get('accept-language'))
   if (preferred === 'es') {
@@ -41,10 +47,11 @@ export function proxy(request: NextRequest) {
     return response
   }
 
-  return NextResponse.next()
+  const url = request.nextUrl.clone()
+  url.pathname = '/en'
+  return NextResponse.redirect(url)
 }
 
 export const proxyConfig = {
   matcher: ['/'],
 }
-

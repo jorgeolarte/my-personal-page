@@ -58,4 +58,3 @@ export const messagesByLocale: Record<Locale, Messages> = {
 export function getMessages(locale: Locale): Messages {
   return messagesByLocale[locale]
 }
-

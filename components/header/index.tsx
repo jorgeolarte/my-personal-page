@@ -8,7 +8,7 @@ import { getMessages, type Locale } from '@/src/i18n/messages'
  */
 export function Header({ locale }: { locale: Locale }): JSX.Element {
   const messages = getMessages(locale)
-  const homeHref = locale === 'es' ? '/es' : '/'
+  const homeHref = locale === 'es' ? '/es' : '/en'
 
   return (
     <HeaderWrapper>
