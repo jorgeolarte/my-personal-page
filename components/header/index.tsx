@@ -11,19 +11,24 @@ export function Header({ locale }: { locale: Locale }): JSX.Element {
   const homeHref = locale === 'es' ? '/es' : '/en'
 
   return (
-    <HeaderWrapper>
-      <ImageHeader messages={messages} homeHref={homeHref} locale={locale} />
-      <div className="space-y-1 max-w-md">
-        <p className="font-body text-base text-white/70 leading-relaxed">
-          {messages.header.line1}
-        </p>
-        <p className="font-body text-base text-white/70 leading-relaxed">
-          {messages.header.line2}
-        </p>
-        <p className="font-body text-base text-white/70 leading-relaxed">
-          {messages.header.line3}
-        </p>
-      </div>
-    </HeaderWrapper>
+    <header>
+      <HeaderWrapper>
+        <ImageHeader messages={messages} homeHref={homeHref} locale={locale} />
+        <section
+          className="space-y-1 max-w-md"
+          aria-label={messages.header.imageAlt}
+        >
+          <p className="font-body text-base text-white/70 leading-relaxed">
+            {messages.header.line1}
+          </p>
+          <p className="font-body text-base text-white/70 leading-relaxed">
+            {messages.header.line2}
+          </p>
+          <p className="font-body text-base text-white/70 leading-relaxed">
+            {messages.header.line3}
+          </p>
+        </section>
+      </HeaderWrapper>
+    </header>
   )
 }

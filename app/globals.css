@@ -28,6 +28,33 @@
     --ring: 330 75% 48%; /* Magenta focus ring */
 
     --radius: 0.5rem;
+
+    /* Transition durations - can be overridden by prefers-reduced-motion */
+    --transition-fast: 150ms;
+    --transition-base: 200ms;
+    --transition-slow: 300ms;
+  }
+
+  /* Reduced motion support - respect user preferences */
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      --transition-fast: 0.01ms;
+      --transition-base: 0.01ms;
+      --transition-slow: 0.01ms;
+    }
+
+    *,
+    *::before,
+    *::after {
+      /* biome-ignore lint/complexity/noImportantStyles: accessibility override */
+      animation-duration: 0.01ms !important;
+      /* biome-ignore lint/complexity/noImportantStyles: accessibility override */
+      animation-iteration-count: 1 !important;
+      /* biome-ignore lint/complexity/noImportantStyles: accessibility override */
+      transition-duration: 0.01ms !important;
+      /* biome-ignore lint/complexity/noImportantStyles: accessibility override */
+      scroll-behavior: auto !important;
+    }
   }
 }
 
@@ -48,6 +75,41 @@
     @apply bg-background text-foreground font-body;
     font-size: var(--text-base);
     line-height: 1.6;
+  }
+
+  /* Enhanced focus indicators for keyboard navigation */
+  :focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  /* Ensure links are keyboard accessible */
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+
+  /* Skip link for keyboard navigation */
+  .skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: hsl(var(--magenta));
+    color: hsl(var(--magenta-foreground));
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 0 0 0.25rem 0;
+    z-index: 100;
+  }
+
+  .skip-link:focus {
+    top: 0;
   }
 
   /* Display text - Jorge Olarte name */
@@ -88,5 +150,28 @@
   .text-small {
     font-size: var(--text-sm);
     line-height: 1.5;
+  }
+
+  /* Text overflow utilities for resilience */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Prevent layout breaks from long words */
+  p,
+  h1,
+  h2,
+  h3,
+  a,
+  button {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  /* Ensure flex/grid children can shrink */
+  .flex > *,
+  .grid > * {
+    min-width: 0;
   }
 }

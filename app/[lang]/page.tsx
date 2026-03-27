@@ -21,7 +21,9 @@ export default async function LangHomePage({
   return (
     <>
       <Header locale={lang} />
-      <Main locale={lang} />
+      <main id="main-content">
+        <Main locale={lang} />
+      </main>
       <Footer locale={lang} />
     </>
   )
